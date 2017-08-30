@@ -29,8 +29,8 @@
         return nil;
     }
 
-    self = [self initWithCGImage:image scale:1 orientation:UIImageOrientationUp];
-
+    self = [self initWithCGImage:image scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
+    
     CGImageRelease(image);
     return self;
 }
